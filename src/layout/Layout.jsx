@@ -6,7 +6,11 @@ function Layout() {
   return (
     <>
       <Navbar />
-      <Outlet />
+      <main className="flex flex-col items-center">
+        <div className="md:w-1/2 w-11/12">
+          <Outlet />
+        </div>
+      </main>
     </>
   );
 }
