@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 
 import PostTitle from "../components/PostTitle";
+import Tag from "./Tag";
 
 import processDate from "../services/processDate";
 import trimPost from "../services/trimPost";
@@ -10,7 +11,7 @@ function PostPreviewCard({ post }) {
   const postPreview = trimPost(post.content);
   const tags =
     post.tags.length !== 0
-      ? "Tags: " + post.tags.map((tag) => tag.name + ", ")
+      ? post.tags.map((tag) => <Tag key={tag.id} text={tag.name} />)
       : "No tags";
 
   return (
@@ -24,7 +25,7 @@ function PostPreviewCard({ post }) {
         <p className="text-slate-500">
           Posted by {post.author.username} on {date}
         </p>
-        <p>{tags}</p>
+        <div className="flex flex-row gap-2">{tags}</div>
         <p>{post._count.comments} comments</p>
       </div>
       <hr className="mt-8" />
