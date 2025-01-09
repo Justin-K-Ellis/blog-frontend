@@ -17,7 +17,7 @@ function PostPreviewCard({ post }) {
   return (
     <div className="p-4 hover:shadow">
       <PostTitle text={post.title} />
-      <p className="mb-2 text-justify">{postPreview}</p>
+      <p className="mb-2 text-justify font-notoSerif">{postPreview}</p>
       <Link className="text-red-500" to={`posts/${post.id}`}>
         Read more
       </Link>

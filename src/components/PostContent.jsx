@@ -13,7 +13,7 @@ function PostContent({ post }) {
       <h3 className="underline text-right my-2 font-light">
         Posted by {post.author.username} on {date}
       </h3>
-      <p className="text-justify">{post.content}</p>
+      <p className="text-justify font-notoSerif">{post.content}</p>
       {<Comments comments={post.comments} />}
       <Back />
     </div>
