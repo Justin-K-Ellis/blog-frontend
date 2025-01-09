@@ -20,10 +20,14 @@ function PostPreviewCard({ post }) {
       <Link className="text-red-500" to={`posts/${post.id}`}>
         Read more
       </Link>
-      <p className="text-slate-500">
-        Posted by {post.author.username} on {date}
-      </p>
-      <p>{tags}</p>
+      <div className="font-light">
+        <p className="text-slate-500">
+          Posted by {post.author.username} on {date}
+        </p>
+        <p>{tags}</p>
+        <p>{post._count.comments} comments</p>
+      </div>
+      <hr className="mt-8" />
     </div>
   );
 }
