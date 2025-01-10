@@ -14,7 +14,7 @@ function SinglePost() {
   useEffect(() => {
     async function getPostData() {
       try {
-        const response = await fetch(`${apiUri}/posts/${postId}`);
+        const response = await fetch(`api/${apiUri}/posts/${postId}`);
         if (!response.ok) {
           setIsError(true);
         }
