@@ -8,13 +8,13 @@ function SinglePost() {
   const [isError, setIsError] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  const { postId } = useParams();
+  const { postId, slug } = useParams();
   const apiUri = import.meta.env.VITE_API;
 
   useEffect(() => {
     async function getPostData() {
       try {
-        const response = await fetch(`api/${apiUri}/posts/${postId}`);
+        const response = await fetch(`${apiUri}/api/posts/${postId}`);
         if (!response.ok) {
           setIsError(true);
         }
