@@ -11,13 +11,28 @@ function Navbar() {
       </div>
       <ul className="flex flex-row text-xl gap-4">
         <li>
-          <NavLink to={"/"}>Home</NavLink>
+          <NavLink
+            to={"/"}
+            className={({ isActive }) => (isActive ? "underline" : "")}
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <NavLink to={"about"}>About</NavLink>
+          <NavLink
+            to={"about"}
+            className={({ isActive }) => (isActive ? "underline" : "")}
+          >
+            About
+          </NavLink>
         </li>
         <li>
-          <NavLink to={"#"}>Login</NavLink>
+          <NavLink
+            to={"/login"}
+            className={({ isActive }) => (isActive ? "underline" : "")}
+          >
+            Login
+          </NavLink>
         </li>
       </ul>
     </nav>
