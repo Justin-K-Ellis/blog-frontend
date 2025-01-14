@@ -24,9 +24,7 @@ function TagsSideBar() {
         {tags?.map((tag) => {
           return (
             <li key={tag.id}>
-              <Link to={`tags/${tag.name}`}>
-                <Tag text={tag.name} />
-              </Link>
+              <Tag text={tag.name} name={tag.name} />
             </li>
           );
         })}
