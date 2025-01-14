@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import SinglePost from "./pages/SinglePost";
 import TaggedPosts from "./pages/TaggedPosts";
+import FourOhfour from "./pages/404";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="tags">
           <Route path=":tag" element={<TaggedPosts />} />
         </Route>
+        <Route path="*" element={<FourOhfour />} />
       </Route>
     </Routes>
   );

@@ -7,13 +7,13 @@ function Layout() {
   return (
     <>
       <Navbar />
-      <div className="flex flew-row">
-        <main className="flex flex-col items-center">
+      <div className="flex flex-col md:flex-row">
+        <main className="flex flex-col items-center md:w-4/5">
           <div className="md:w-1/2 w-11/12">
             <Outlet />
           </div>
         </main>
-        <TagsSideBar />
+        <TagsSideBar className="md:w-1/5" />
       </div>
     </>
   );

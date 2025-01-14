@@ -2,10 +2,10 @@ import { NavLink } from "react-router";
 
 function Navbar() {
   return (
-    <nav className="flex flex-row justify-between p-2">
+    <nav className="flex flex-row justify-between items-center p-2">
       <div className="flex flex-col">
         <h1 className="text-3xl font-bold">Logical Space 🪐</h1>
-        <p className="italic font-light">
+        <p className="italic font-light hidden md:flex">
           Exploring the space of reasons in philosophy and programming
         </p>
       </div>

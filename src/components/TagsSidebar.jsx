@@ -18,9 +18,9 @@ function TagsSideBar() {
   }, []);
 
   return (
-    <section className="mr-12">
+    <section className="md:mr-12 p-2">
       <h2>Tags</h2>
-      <ul className="flex flex-col gap-2">
+      <ul className="flex flex-row md:flex-col gap-2">
         {tags?.map((tag) => {
           return (
             <li key={tag.id}>
