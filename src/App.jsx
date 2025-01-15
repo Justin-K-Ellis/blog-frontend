@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import SinglePost from "./pages/SinglePost";
 import TaggedPosts from "./pages/TaggedPosts";
+import Login from "./pages/Login";
 import FourOhfour from "./pages/404";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
         <Route path="posts">
           <Route path=":postId/:slug" element={<SinglePost />} />
         </Route>
