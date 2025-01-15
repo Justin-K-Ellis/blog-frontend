@@ -13,7 +13,7 @@ function Layout() {
             <Outlet />
           </div>
         </main>
-        <TagsSideBar className="md:w-1/5" />
+        {/* <TagsSideBar className="md:w-1/5" /> */}
       </div>
     </>
   );

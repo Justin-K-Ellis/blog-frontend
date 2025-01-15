@@ -25,8 +25,6 @@ function TaggedPosts() {
   }, [apiUri]);
 
   if (error) return <p>Sorry, something went wrong :(</p>;
-  taggedPosts && console.log(taggedPosts);
-  console.log("tag:", tag);
 
   return (
     <>

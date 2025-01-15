@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { useNavigate } from "react-router";
 
 import PostTitle from "../components/PostTitle";
 import Tag from "./Tag";
@@ -15,6 +16,7 @@ function PostPreviewCard({ post }) {
       ? post.tags.map((tag) => <Tag key={tag.id} text={tag.name} />)
       : "No tags";
   const slug = makeSlug(post.title);
+  const navigate = useNavigate();
 
   return (
     <div className="p-4 hover:shadow">
